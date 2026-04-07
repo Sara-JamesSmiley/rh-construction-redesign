@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Apex Construction & Remodeling | Licensed General Contractor</title>
-<meta name="description" content="Apex Construction delivers expert home remodeling, additions, and renovation services. Licensed, bonded, insured. Free estimates. Serving the greater metro area.">
-<meta property="og:title" content="Apex Construction & Remodeling | Licensed General Contractor">
-<meta property="og:description" content="Expert home remodeling and construction. Kitchen, bath, additions, whole-home renovations. Free estimates.">
+<title>R&H Construction Services | Krum Home Construction & Remodels</title>
+<meta name="description" content="R&H Construction Services is a Krum, TX home builder and general contractor since 1998. We handle new homes, remodels, additions, outdoor living, custom carpentry, and built-ins with free estimates.">
+<meta property="og:title" content="R&H Construction Services | Krum Home Construction & Remodels">
+<meta property="og:description" content="Serving Krum and Denton County since 1998. R&H Construction Services offers trusted home building, remodels, and renovation services. Free estimates available.">
 <meta property="og:image" content="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -163,6 +163,15 @@ nav {
 .form-submit { width: 100%; background: var(--amber); color: var(--white); border: none; padding: 14px; border-radius: 6px; font-family: 'Oswald', sans-serif; font-size: 1rem; font-weight: 600; cursor: pointer; transition: background 0.2s; letter-spacing: 0.05em; }
 .form-submit:hover { background: #a86824; }
 .form-note { font-size: 0.75rem; color: var(--muted); text-align: center; margin-top: 10px; }
+.form-message {
+    margin-top: 12px;
+    font-size: 0.8rem;
+    text-align: center;
+    min-height: 18px;
+}
+.form-message.success { color: #2f6d2f; font-weight: 700; }
+.form-message.error { color: #b00020; font-weight: 700; }
+.form-submit:disabled { opacity: 0.55; cursor: not-allowed; }
 
 /* TRUST BAR */
 .trust-bar {
@@ -349,11 +358,11 @@ footer ul li a:hover { color: var(--amber); }
 
 <!-- TOP BAR -->
 <div class="topbar">
-  <div class="topbar-inner">
-    <span>📞 Free Estimates | Licensed &amp; Insured | Serving Metro &amp; Surrounding Areas</span>
+    <div class="topbar-inner">
+    <span>📞 Free Estimates | Licensed General Contractor | Serving Krum &amp; Denton County</span>
     <div class="topbar-right">
       <span>Mon–Sat: 7am–6pm</span>
-      <a href="tel:+15555550162">(555) 555-0162</a>
+      <a href="tel:+19408640000">(940) 864-0000</a>
     </div>
   </div>
 </div>
@@ -364,8 +373,8 @@ footer ul li a:hover { color: var(--amber); }
     <a href="#" class="logo">
       <div class="logo-icon">🏗️</div>
       <div>
-        <div class="logo-text">APEX <span>CONSTRUCTION</span></div>
-        <div class="logo-sub">Licensed General Contractor</div>
+        <div class="logo-text">R&amp;H <span>CONSTRUCTION</span></div>
+        <div class="logo-sub">General Contractor &amp; Home Builder</div>
       </div>
     </a>
     <div class="nav-links">
@@ -394,66 +403,68 @@ footer ul li a:hover { color: var(--amber); }
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-content">
-      <div class="hero-badge">⭐ 4.9 Stars · 300+ Projects Completed</div>
-      <h1>Build &amp; Remodel<br>with <span>Confidence</span></h1>
-      <p>From kitchen renovations and bathroom remodels to full additions and whole-home transformations — Apex Construction delivers craftsmanship you can count on, on time and on budget.</p>
+      <div class="hero-badge">⭐ Since 1998 · 20+ Years in Business</div>
+      <h1>Home Builder &amp; Remodeler<br>with <span>Confidence</span></h1>
+      <p>R&amp;H Construction Services delivers expert home builds, custom remodels, and outdoor living projects in Krum, Texas. We handle new construction and every phase of renovation from design to final walkthrough.</p>
       <div class="hero-actions">
         <a href="#contact" class="btn-primary">Get Free Estimate</a>
         <a href="#portfolio" class="btn-outline">View Our Work</a>
       </div>
       <div class="hero-stats">
         <div class="hero-stat">
-          <div class="hero-stat-num">22</div>
+          <div class="hero-stat-num">20+</div>
           <div class="hero-stat-label">Years Experience</div>
         </div>
         <div class="hero-stat">
-          <div class="hero-stat-num">300+</div>
-          <div class="hero-stat-label">Projects Done</div>
+          <div class="hero-stat-num">Free</div>
+          <div class="hero-stat-label">Consultations</div>
         </div>
         <div class="hero-stat">
           <div class="hero-stat-num">4.9★</div>
           <div class="hero-stat-label">Google Rating</div>
         </div>
         <div class="hero-stat">
-          <div class="hero-stat-num">5yr</div>
-          <div class="hero-stat-label">Workmanship Warranty</div>
+          <div class="hero-stat-num">10+</div>
+          <div class="hero-stat-label">Services Offered</div>
         </div>
       </div>
     </div>
     <div class="hero-card" id="contact">
       <h3>Get Your Free Estimate</h3>
       <p>We'll contact you within 1 business day to schedule your consultation.</p>
-      <form>
+      <form id="leadForm" autocomplete="on">
         <div class="form-group">
           <label>Full Name</label>
-          <input type="text" placeholder="John Smith">
+          <input type="text" name="full_name" placeholder="John Smith" required>
         </div>
         <div class="form-group">
           <label>Phone Number</label>
-          <input type="tel" placeholder="(555) 000-0000">
+          <input type="tel" name="phone" placeholder="(940) 864-0000" required>
         </div>
         <div class="form-group">
           <label>Email Address</label>
-          <input type="email" placeholder="john@email.com">
+          <input type="email" name="email" placeholder="john@email.com">
         </div>
         <div class="form-group">
           <label>Project Type</label>
-          <select>
+          <select name="project_type" required>
+            <option>New Home Build</option>
+            <option>Home Addition</option>
             <option>Kitchen Remodel</option>
             <option>Bathroom Renovation</option>
-            <option>Home Addition</option>
-            <option>Whole-Home Renovation</option>
-            <option>Deck / Outdoor</option>
-            <option>Basement Finishing</option>
+            <option>Custom Built-Ins</option>
+            <option>Deck / Outdoor Kitchen</option>
+            <option>General Remodeling</option>
             <option>Other</option>
           </select>
         </div>
         <div class="form-group">
           <label>Tell Us About Your Project</label>
-          <textarea placeholder="Briefly describe what you're looking to do..."></textarea>
+          <textarea name="details" placeholder="Briefly describe what you're looking to do..."></textarea>
         </div>
         <button type="submit" class="form-submit">REQUEST FREE ESTIMATE →</button>
       </form>
+      <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
       <p class="form-note">🔒 No spam. No obligation. Your info is private.</p>
     </div>
   </div>
@@ -462,11 +473,11 @@ footer ul li a:hover { color: var(--amber); }
 <!-- TRUST BAR -->
 <div class="trust-bar">
   <div class="trust-bar-inner">
-    <div class="trust-item"><span class="icon">🏛️</span><div class="trust-item-text"><strong>Licensed &amp; Bonded</strong><span>GC Lic #CGC1526840</span></div></div>
+    <div class="trust-item"><span class="icon">🏛️</span><div class="trust-item-text"><strong>Established Since</strong><span>1998</span></div></div>
     <div class="trust-item"><span class="icon">🛡️</span><div class="trust-item-text"><strong>Fully Insured</strong><span>$2M Liability Coverage</span></div></div>
     <div class="trust-item"><span class="icon">📋</span><div class="trust-item-text"><strong>Permit Ready</strong><span>We Handle All Permits</span></div></div>
-    <div class="trust-item"><span class="icon">🤝</span><div class="trust-item-text"><strong>Written Contracts</strong><span>Transparent Pricing</span></div></div>
-    <div class="trust-item"><span class="icon">✅</span><div class="trust-item-text"><strong>5-Year Warranty</strong><span>Workmanship Guaranteed</span></div></div>
+    <div class="trust-item"><span class="icon">🤝</span><div class="trust-item-text"><strong>Family Owned</strong><span>Service-Focused Team</span></div></div>
+    <div class="trust-item"><span class="icon">🏗️</span><div class="trust-item-text"><strong>Full-Service Builds</strong><span>Home Builds &amp; Remodels</span></div></div>
   </div>
 </div>
 
@@ -475,44 +486,44 @@ footer ul li a:hover { color: var(--amber); }
   <div class="container">
     <div class="services-header">
       <div class="section-label">What We Build</div>
-      <h2 class="section-title">Full-Service Construction &amp; Remodeling</h2>
-      <p class="section-sub">Whether you need a single room updated or a full addition built from scratch, our experienced crews handle every phase of the project.</p>
+      <h2 class="section-title">Home Construction &amp; Residential Remodels</h2>
+      <p class="section-sub">From new builds to custom additions, we provide complete construction and remodeling support across Krum and Denton County.</p>
     </div>
     <div class="services-grid">
       <div class="service-card">
         <div class="service-icon">🍳</div>
-        <h3>Kitchen Remodeling</h3>
-        <p>Full kitchen transformations — new cabinets, countertops, islands, lighting, and flooring. We manage every trade from demo to final install.</p>
+        <h3>Kitchen &amp; Bathroom Remodeling</h3>
+        <p>Full kitchen and bath transformations with new cabinetry, lighting, tile, islands, and finishes. We coordinate each trade and keep the project on schedule.</p>
         <a href="#contact" class="service-link">Get a quote →</a>
       </div>
       <div class="service-card">
         <div class="service-icon">🛁</div>
-        <h3>Bathroom Renovation</h3>
-        <p>Master baths, guest baths, and powder rooms. Walk-in showers, soaking tubs, custom tile, vanities, and spa-inspired finishes.</p>
+        <h3>Home Additions</h3>
+        <p>Expand your home with practical additions, sunrooms, or garage conversions that add living space and long-term resale value.</p>
         <a href="#contact" class="service-link">Get a quote →</a>
       </div>
       <div class="service-card">
         <div class="service-icon">🏠</div>
-        <h3>Home Additions</h3>
-        <p>Expand your living space with a room addition, sunroom, second-story addition, or garage conversion. We engineer and build it all.</p>
+        <h3>New Home Construction</h3>
+        <p>Build a new home with structured planning, structural coordination, and transparent scheduling from foundation to finish.</p>
         <a href="#contact" class="service-link">Get a quote →</a>
       </div>
       <div class="service-card">
         <div class="service-icon">🏗️</div>
-        <h3>Whole-Home Renovation</h3>
-        <p>Gut-and-rebuild renovations, historic restorations, and full interior overhauls. One contractor manages the entire project.</p>
+        <h3>Custom Carpentry &amp; Trim</h3>
+        <p>Built-ins, custom cabinetry, trim, and cabinetry touches tailored to your style, including fireplace and detail work upgrades.</p>
         <a href="#contact" class="service-link">Get a quote →</a>
       </div>
       <div class="service-card">
         <div class="service-icon">🌿</div>
-        <h3>Deck &amp; Outdoor Living</h3>
-        <p>Custom decks, covered patios, pergolas, and outdoor kitchens. Composite or wood decking with built-in seating and lighting.</p>
+        <h3>Decks, Outdoor Kitchens &amp; Arbors</h3>
+        <p>Patios, decks, fences, and outdoor living updates designed to improve function and outdoor enjoyment all year long.</p>
         <a href="#contact" class="service-link">Get a quote →</a>
       </div>
       <div class="service-card">
         <div class="service-icon">🏚️</div>
-        <h3>Basement Finishing</h3>
-        <p>Turn your unfinished basement into a media room, home gym, guest suite, or in-law apartment. Full egress and waterproofing included.</p>
+        <h3>Swimming Pools, Fencing &amp; Concrete</h3>
+        <p>Stamping, concrete upgrades, and perimeter upgrades that complete your project’s curb appeal and safety at the property level.</p>
         <a href="#contact" class="service-link">Get a quote →</a>
       </div>
     </div>
@@ -559,13 +570,13 @@ footer ul li a:hover { color: var(--amber); }
       <div class="whyus-image">
         <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=700" alt="Construction team at work">
         <div class="whyus-badge">
-          <strong>22</strong>
+          <strong>20+</strong>
           <span>Years in Business</span>
         </div>
       </div>
       <div class="whyus-content">
-        <div class="section-label">Why Choose Apex</div>
-        <h2 class="section-title">We Do It Right — The First Time</h2>
+        <div class="section-label">Why Choose R&amp;H</div>
+        <h2 class="section-title">We Do It Right, the First Time</h2>
         <p style="color:var(--muted); font-size:0.95rem; line-height:1.7; margin-bottom:8px;">We're not a company that disappears after the contract is signed. Our team is on-site, communicating clearly, and doing the work ourselves — no fly-by-night subcontractors.</p>
         <div class="why-list">
           <div class="why-item">
@@ -644,7 +655,7 @@ footer ul li a:hover { color: var(--amber); }
     <div class="testimonials-grid">
       <div class="testimonial-card">
         <div class="stars">★★★★★</div>
-        <p class="testimonial-text">"Apex completely transformed our 1980s kitchen. The team was professional, clean, and done a week ahead of schedule. The workmanship is stunning — we get compliments constantly."</p>
+        <p class="testimonial-text">"R&amp;H transformed our kitchen and bath into a beautiful open-plan space. Professional crew, clear communication, and great cleanup throughout."</p>
         <div class="testimonial-author">
           <div class="author-avatar">TW</div>
           <div>
@@ -655,7 +666,7 @@ footer ul li a:hover { color: var(--amber); }
       </div>
       <div class="testimonial-card">
         <div class="stars">★★★★★</div>
-        <p class="testimonial-text">"We added a 600 sq ft addition — master bedroom and ensuite. Apex handled everything from permits to finish carpentry. Outstanding communication throughout."</p>
+        <p class="testimonial-text">"We added a 600 sq ft room and new outdoor living area. R&amp;H managed permits and trades with excellent communication every step of the way."</p>
         <div class="testimonial-author">
           <div class="author-avatar">MR</div>
           <div>
@@ -666,7 +677,7 @@ footer ul li a:hover { color: var(--amber); }
       </div>
       <div class="testimonial-card">
         <div class="stars">★★★★★</div>
-        <p class="testimonial-text">"I've hired three contractors over the years. Apex is the first that came in on budget with zero surprises. The bathroom looks like a luxury hotel. Highly recommend."</p>
+        <p class="testimonial-text">"I've hired several contractors before; R&amp;H came in on budget with zero surprises and delivered a truly polished finish."</p>
         <div class="testimonial-author">
           <div class="author-avatar">SL</div>
           <div>
@@ -693,19 +704,19 @@ footer ul li a:hover { color: var(--amber); }
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="footer-logo">APEX <span>CONSTRUCTION</span></div>
-        <p>Licensed general contractor serving the metro area and surrounding communities since 2003. Kitchens, baths, additions, and whole-home renovations.</p>
-        <div class="footer-license">GC License #CGC1526840 | Bonded &amp; Insured | ROC #312774</div>
+        <div class="footer-logo">R&amp;H <span>CONSTRUCTION</span></div>
+        <p>Home construction and remodeling team serving Krum, TX and Denton County. New homes, additions, remodels, and custom carpentry services since 1998.</p>
+        <div class="footer-license">Licensed General Contractor · Bonded &amp; Insured</div>
       </div>
       <div>
         <h4>Services</h4>
         <ul>
-          <li><a href="#services">Kitchen Remodeling</a></li>
-          <li><a href="#services">Bathroom Renovation</a></li>
+          <li><a href="#services">Kitchen &amp; Bath Remodeling</a></li>
           <li><a href="#services">Home Additions</a></li>
-          <li><a href="#services">Whole-Home Renovation</a></li>
-          <li><a href="#services">Deck &amp; Outdoor</a></li>
-          <li><a href="#services">Basement Finishing</a></li>
+          <li><a href="#services">New Home Construction</a></li>
+          <li><a href="#services">Custom Carpentry</a></li>
+          <li><a href="#services">Decks &amp; Outdoor Living</a></li>
+          <li><a href="#services">Fencing, Concrete &amp; Exterior</a></li>
         </ul>
       </div>
       <div>
@@ -721,18 +732,77 @@ footer ul li a:hover { color: var(--amber); }
       <div>
         <h4>Contact</h4>
         <ul>
-          <li><a href="tel:+15555550162">(555) 555-0162</a></li>
-          <li><a href="mailto:info@apexconstruction.com">info@apexconstruction.com</a></li>
-          <li><a href="#">1234 Builder Way, Suite 100<br>Metro City, ST 00000</a></li>
+          <li><a href="tel:+19408640000">(940) 864-0000</a></li>
+          <li><a href="mailto:info@rhconstructionservices.com">info@rhconstructionservices.com</a></li>
+          <li><a href="#">Krum, Texas Area</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Apex Construction &amp; Remodeling. All rights reserved.</span>
+      <span>© 2026 R&amp;H Construction Services. All rights reserved.</span>
       <span>Privacy Policy | Terms of Service</span>
     </div>
   </div>
 </footer>
+
+<script>
+  (() => {
+    const form = document.getElementById('leadForm');
+    const messageEl = document.getElementById('formMessage');
+    const submitBtn = form ? form.querySelector('.form-submit') : null;
+    const webhookUrl = 'https://services.leadconnectorhq.com/hooks/QnjnUM8MYV2lamAulMp1/webhook-trigger/08263887-5edd-4a25-9cfc-b348f61b842f';
+
+    if (!form || !messageEl || !submitBtn) {
+      return;
+    }
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      const originalButtonText = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      messageEl.className = 'form-message';
+      messageEl.textContent = '';
+
+      const formData = new FormData(form);
+      const payload = {
+        source: 'rh-construction-redesign',
+        lead_source: 'Website Form',
+        full_name: formData.get('full_name'),
+        phone: formData.get('phone'),
+        email: formData.get('email'),
+        project_type: formData.get('project_type'),
+        details: formData.get('details'),
+        submitted_at: new Date().toISOString()
+      };
+
+      try {
+        const response = await fetch(webhookUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
+
+        if (!response.ok) {
+          throw new Error(`Webhook returned status ${response.status}`);
+        }
+
+        messageEl.className = 'form-message success';
+        messageEl.textContent = 'Thanks — your request was sent successfully.';
+        form.reset();
+      } catch (error) {
+        messageEl.className = 'form-message error';
+        messageEl.textContent = 'Submission failed right now. Please call us or try again in a moment.';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalButtonText;
+      }
+    });
+  })();
+</script>
 
 </body>
 </html>
